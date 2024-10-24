@@ -1,0 +1,61 @@
+/* 法一  四巧板三巧透明法 */
+.triangleOne{
+    width: 0px;
+    height: 0px;
+    /* 这里必须设置成0px，否则会得到梯形 */
+    /* background-color: aqua; */
+    border-top: 50px solid transparent;
+    border-left:50px solid  transparent ;
+    border-right: 50px solid green;
+    border-bottom: 50px solid  transparent;
+    /* 需要啥方向就其他方向酒吧该方向的颜色改成透明transport */
+}
+/* 要梯形怎么办？就是在宽高处自己加数据就好啦 */
+/* 法二  border占位法 */
+.triangleTwo{
+    width: 0px;
+    height: 0px;
+    border: 50px solid transparent;
+    border-top: 50px solid red;
+    /* 这两个都要实心solid，不然是看不见的 */
+}
+/*法三 大材小用剪切法*/
+.triangleThree{
+    width: 80px;
+    height: 80px;
+    /* 直接设置宽高，剪裁来解决 */
+    background-color: rgb(255, 235, 13);
+    clip-path: polygon(0% 100% ,100% 100% ,0% 0%);
+    /* 酷酷的函数，不需要border来解决了 六个值，就是三个坐标（x,y） */
+
+}
+
+/* 话都提到这里了，还是再学学常见的高级工具剪裁函数吧 */
+.clip1{
+    width: 80px;
+    height: 80px;
+    background-color: aquamarine;
+    clip-path: inset(3px);
+    /* 等比例剪裁，仍然是矩形 */
+    clip-path: inset(3px 10px);
+    /* 前者剪裁列，后者剪裁行 */
+}/*缺点：焦点在中心，不够灵活*/
+.clip2{
+    width: 80px;
+    height: 80px;
+    background-color: rgb(0, 28, 19);
+    clip-path: inset(1rem 2rem 2rem 3rem);/*上右下左*/
+}/*以rem为单位，可以实现四角灵活变动*/
+.clip3{
+    width: 80px;
+    height: 80px;
+    background-color: rgb(216, 50, 161);
+    clip-path: circle(50%);
+}/*实现圆形*/
+.clip4{
+    width: 80px;
+    height: 80px;
+    background-color: rgb(139, 105, 128);
+    clip-path: ellipse(40% 30%);
+    /* 数值要在50%及以下，才不会变形 */
+}/*实现椭圆*/

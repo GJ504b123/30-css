@@ -1,0 +1,58 @@
+*{
+    /* 干掉所有的margin */
+    margin: 0px;
+}
+a{
+    text-decoration: none;
+    color: black;
+    display: block;
+    /* border: 1px solid;/*必须设置成块状元素，不然a还是行内元素，border不可以包裹整个盒子 */
+}
+a:hover{
+    color: red;
+}
+.product{
+    width: 268px;
+    /* height: 500px; */
+    /* background-color: red; */
+    margin: 50px auto 0px;
+    /* border: 1px solid #333; */
+    text-align: center;/*让内部元素水品居中*/
+}
+.product img{
+    width: 195px;
+    /*对于图片一般只加宽度或者高度，让它自适应，以免变形*/
+    /* margin: auto;没有效果 */
+}
+.discrible{
+    /* border: 1px solid; */
+    color: #333333c5;
+    font-size: 16px;
+}
+.product .product-text{
+    height: 100px;/*调试用的*/
+    background-color: #f8f8f8;
+    margin-top: 20px;
+    padding: 15px;
+    /* flex-direction: row; */
+}
+
+.product.product-text .product-mark{
+    font-size: 0px;/*干掉子级图片之间的间隔，自己设置统一间隔，避免不同用户看见的样式不同*/
+}
+.product .product-text .product-mark img{
+    margin: 0px 8px;
+    /* background-color: aquamarine; */
+    height: 25px;
+    width: auto;
+}
+.product .product-text p{/*每个class之间要用空格隔开*/
+    color: red;
+    font-size: 20px;
+    /* border: #333 1px solid; */
+    margin:4px auto 0px;
+}
+.product .product-text h3{/*每个class之间要用空格隔开*/
+    /* border: 1px solid; */
+    margin: 10px auto 0px;
+}

@@ -1,0 +1,46 @@
+*,h3{
+    margin: 0px;/*clear 默认距离*/
+}
+.news{
+    width: 360px;
+    height: 400px;/*其实不应该写高度的，这里是为了看清楚效果，后续内容会自己加高度，不要限制死了*/
+    margin: 50px auto 0px;/*auto使得左右差距相同，自动水平居中*/
+    /* border: 1px solid; */
+    padding: 15px;/*内容集中一点*/
+}
+.news h3{
+    /* border: 1px solid red; */
+    font-size: 20px;
+}
+.news ul{
+    list-style: none;/*clear表格的默认样式*/
+    /* background-color: antiquewhite; */
+    
+}
+.news ul li{/*规范化，加上ul*/
+    line-height: 35px;/*行内高度，对于子元素调节*/
+    font-size: 16px;
+}
+.news ul li a {
+    text-decoration: none;/*clear a标签的默认样式下划线*/
+    color: #333;/*#333是灰色*/
+}
+.news ul li a:hover{/*不可以a与：之间有空格*/
+    color: red;
+}
+.col1{
+    color: red;
+    
+}
+.col2{
+    color:#FF6600;
+
+}
+.col3{
+    color: #FAA90E;
+
+}
+.col4{
+    color: #9195A3;
+
+}
